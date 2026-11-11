@@ -1,0 +1,56 @@
+@charset "UTF-8";
+// Honoka for Bootstrap 5
+// 構成: functions → Honoka 差分変数 → Bootstrap 本体 → Honoka 独自スタイル
+
+// 1. 関数のみ先に読む（変数上書きの前提条件）
+@import "bootstrap/scss/functions";
+
+// 2. Honoka の差分（bootstrap/scss/variables より前でなければ効かない）
+@import "honoka/variables";
+
+// 3. Bootstrap 5.3 本体（設定ブロック）
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// 4. Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/progress";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/placeholders";
+
+// 5. Helpers / Utilities
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";
+
+// 6. Honoka 独自スタイル
+@import "honoka/override";

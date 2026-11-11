@@ -1,10 +1,17 @@
 @charset "UTF-8";
 
+// ---------------------------------------------------------------------------
+// ナビゲーションリンクの下線アニメーション（Honoka 独自）
+// BS5 では hover-focus ミックスインが廃止されたため :hover, :focus を直接書く
+// 下線色は BS4 の $navbar-light-active-color / $navbar-dark-active-color の
+// 代わりに、.navbar が持つ CSS 変数を参照する（light / dark 両対応）
+// ---------------------------------------------------------------------------
 .navbar {
   .nav-item {
     .nav-link {
       position: relative;
-      margin-right: $spacer * .5;
+      margin-right: 0.5rem;
+
       &::before {
         position: absolute;
         right: 0;
@@ -13,30 +20,97 @@
         width: 0;
         margin: 0 auto;
         content: "";
-        border-bottom-style: solid;
-        border-bottom-width: 1px;
-        transition: width .2s;
+        border-bottom: 1px solid var(--bs-navbar-active-color);
+        transition: width 0.2s;
       }
-      @include hover-focus {
-        &::before {
-          width: 100%;
-        }
+
+      &:hover::before,
+      &:focus::before {
+        width: 100%;
+      }
+
+      &.active::before {
+        width: 100%;
       }
     }
+
     &.active .nav-link::before {
       width: 100%;
     }
   }
 }
 
-.navbar-dark {
-  .nav-item .nav-link::before {
-    border-color: $navbar-dark-active-color;
+@media (prefers-reduced-motion: reduce) {
+  .navbar .nav-item .nav-link::before {
+    transition: none;
   }
 }
 
-.navbar-light {
-  .nav-item .nav-link::before {
-    border-color: $navbar-light-active-color;
-  }
+// ---------------------------------------------------------------------------
+// ボタンのラベル改行を防ぐ（BS4 では .btn に white-space: nowrap があった）
+// ---------------------------------------------------------------------------
+.btn {
+  white-space: nowrap;
+}
+
+// ---------------------------------------------------------------------------
+// Blockquote（BS5 では font-weight が削除されたため BS4 相当に戻す）
+// Honoka の $font-weight-light は 400
+// ---------------------------------------------------------------------------
+.blockquote {
+  font-weight: $font-weight-light;
+}
+
+.blockquote-footer {
+  // BS5 では margin-top が -$spacer（-1rem）になって本文と被るため、
+  // BS4 相当の正のマージンに戻す
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+// ---------------------------------------------------------------------------
+// Readonly 入力欄の背景色（BS5 では disabled のみ。BS4 では readonly もグレー）
+// form-control-plaintext は透明背景のままにする
+// ---------------------------------------------------------------------------
+.form-control[readonly]:not(.form-control-plaintext) {
+  background-color: $input-disabled-bg;
+  opacity: 1;
+}
+
+// ---------------------------------------------------------------------------
+// disabled な form-check（BS4 では背景がグレー、ラベルが $gray-600）
+// ---------------------------------------------------------------------------
+.form-check-input:disabled,
+.form-check-input[disabled] {
+  background-color: $input-disabled-bg;
+}
+
+.form-check-input:disabled ~ .form-check-label,
+.form-check-input[disabled] ~ .form-check-label {
+  color: $gray-600;
+}
+
+// ---------------------------------------------------------------------------
+// .text-muted の後継 .text-body-secondary の色を BS4 相当の $gray-600 に戻す
+// BS5 では --bs-secondary-color（rgba(33, 37, 41, 0.75)）で濃すぎる
+// ---------------------------------------------------------------------------
+.text-body-secondary {
+  color: $gray-600 !important;
+}
+
+// ---------------------------------------------------------------------------
+// small / .small の font-weight を BS4 相当の 400 に戻す
+// BS5 では指定がなく、見出し内の small が親の 600 を継承して太く見える
+// ---------------------------------------------------------------------------
+small,
+.small {
+  font-weight: 400;
+}
+
+// ---------------------------------------------------------------------------
+// 印刷ページサイズ（BS5 は印刷スタイルを削除したため自前で用意）
+// Honoka は a3 を指定していた
+// ---------------------------------------------------------------------------
+@page {
+  size: A3;
 }

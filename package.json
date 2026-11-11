@@ -1,74 +1,16 @@
 {
-  "name": "bootstrap-honoka",
-  "version": "4.4.1",
-  "description": "Honoka is one of the Bootstrap original theme.",
-  "author": "windyakin",
-  "website": "http://honokak.osaka/",
-  "config": {
-    "packageName": "Honoka",
-    "projectStartYear": "2015",
-    "licenseUrl": "https://github.com/windyakin/Honoka/blob/master/LICENSE"
-  },
-  "keywords": [
-    "css",
-    "bootstrap",
-    "sass",
-    "scss",
-    "lovelive",
-    "web",
-    "front-end",
-    "framework",
-    "theme"
-  ],
+  "name": "honoka-bootstrap5",
+  "version": "5.3.3-0.1.0",
+  "private": true,
+  "description": "Honoka's Japanese typography tuning ported onto Bootstrap 5",
   "license": "MIT",
-  "main": "dist/js/bootstrap.js",
   "scripts": {
-    "start": "gulp default",
-    "build": "gulp release",
-    "test": "gulp test"
-  },
-  "style": "dist/css/bootstrap.css",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/windyakin/honoka.git"
-  },
-  "dependencies": {
-    "bootstrap": "4.4.1",
-    "jquery": "1.9.1 - 3",
-    "popper.js": "^1.16.1"
+    "build": "sass --load-path=node_modules --no-source-map scss/bootstrap-honoka.scss dist/css/bootstrap.css",
+    "build:min": "sass --load-path=node_modules --no-source-map --style=compressed scss/bootstrap-honoka.scss dist/css/bootstrap.min.css",
+    "watch": "sass --load-path=node_modules --watch scss/bootstrap-honoka.scss dist/css/bootstrap.css"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "browser-sync": "^2.26.14",
-    "clean-css": "^4.2.3",
-    "del": "^5.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-eslint": "^6.0.0",
-    "gulp-load-plugins": "^2.0.6",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-stylelint": "11.0.0",
-    "gulp-zip": "^5.1.0",
-    "postcss-flexbugs-fixes": "^4.2.1",
-    "run-sequence": "^2.2.1",
-    "stylelint": "12.0.1",
-    "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.19.0"
-  },
-  "files": [
-    "build",
-    "dist",
-    "scss/**/*.scss",
-    "gulpfile.js",
-    "LICENSE"
-  ]
+    "bootstrap": "5.3.3",
+    "sass": "1.77.8"
+  }
 }

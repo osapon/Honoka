@@ -1,92 +1,44 @@
-# Honoka
+# Honoka for Bootstrap 5
 
-[![ci](https://github.com/windyakin/Honoka/actions/workflows/ci.yml/badge.svg)](https://github.com/windyakin/Honoka/actions/workflows/ci.yml)
-[![devDependency Status](https://david-dm.org/windyakin/Honoka/dev-status.svg)](https://david-dm.org/windyakin/Honoka?type=dev)
-[![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![npm](https://img.shields.io/npm/v/bootstrap-honoka.svg)](https://www.npmjs.com/package/bootstrap-honoka)
+Bootstrap 5 向けの [Honoka](https://github.com/windyakin/Honoka) テーマ実装です。
 
-[http://honokak.osaka/](http://honokak.osaka/)
+## 特徴
 
-[![Honoka](docs/assets/img/sample.png)](http://honokak.osaka/)
+- Bootstrap 5.3.3 本体をそのまま使用
+- 日本語フォント・ウェイト調整を Honoka 流にカスタマイズ
+- SCSS の変数上書きのみで構成（Bootstrap 本体を fork しない）
 
-"Honoka" は日本語も美しく表示できる Bootstrap テーマです。
+## 使い方
 
-## About "Honoka"
-
-通常の [Bootstrap](http://getbootstrap.com/) では、日本語の表示が最適であるとはいえません。 "Honoka" では Bootstrap をベースに、日本語表示に適したフォントの指定や、ウェイトに関するコードを追記した Bootstrap テーマです。
-
-## Live Demo
-
-* [http://honokak.osaka/bootstrap-ja.html](http://honokak.osaka/bootstrap-ja.html) (日本語レイアウト)
-* [http://honokak.osaka/bootstrap.html](http://honokak.osaka/bootstrap.html) (英語レイアウト)
-
-## Getting Started
-
-### Download
-
-[Releases](https://github.com/windyakin/Honoka/releases) ページから最新版をダウンロードしてください。
-
-### npm
-
-Node.js のパッケージ管理システムである、 [npm](https://npmjs.com) で [公開されています](https://www.npmjs.com/package/bootstrap-honoka)。 [webpack](https://webpack.js.org/) など、npmを利用したmodule bundlerでご利用ください。
-
-```
-npm install --save bootstrap-honoka
+```bash
+npm install
+npm run build
 ```
 
-パッケージ名の先頭に **bootstrap-** があることに注意してください。
+`dist/css/bootstrap.css` が生成されます。
 
-### Bower
+## 主なカスタマイズ
 
-[Bower](http://bower.io/) からインストールすることができます。
+| 項目 | 値 |
+|---|---|
+| 日本語フォント | ヒラギノ角ゴ、メイリオを含むスタック |
+| `$font-weight-light` | 400 |
+| `$font-weight-bold` | 600 |
+| `$headings-font-weight` | 600 |
+| `$display-font-weight` | 600 |
+| `$lead-font-weight` | 400 |
+| `$navbar-padding-y` | 1.2rem |
+| `$navbar-padding-x` | 1.5rem |
+| カラーパレット | Bootstrap 4 互換（#007bff など） |
+| 見出しサイズ | RFS 無効（BS4 相当の固定サイズ） |
+| リンクの下線 | なし（BS5 既定の underline から変更） |
 
-最新版をインストールするには以下のコマンドを実行してください。
+## 注意点
 
-```
-bower install --save-dev $(node -e "$(curl -fsSL https://cdn.honokak.osaka/last.js)" windyakin Honoka)
-```
+- **リンクの下線を消している**ため、色のコントラストを十分に確保してください。必要に応じて `$link-decoration` を元に戻すか、ホバー時の装飾を追加してください。
+- **ダークモード**は Honoka 本来に存在しないため、`data-bs-theme="dark"` 使用時はテーマカラーの調整が必要になる場合があります。
+- ビルド時に表示される `mixed-decls` の Deprecation Warning は Bootstrap 5.3.3 本体由来です。本テーマ側の問題ではありません。
 
-もしcURLが入っていない環境の場合には、
+## ライセンス
 
-```
-bower install --save-dev Honoka#(version)
-```
-
-`(version)` には Honoka のバージョン番号を指定します(ex. `Honoka#3.3.5-c`)。 Honoka の最新バージョン番号は [Releases](https://github.com/windyakin/Honoka/releases) ページから確認してください。
-
-## Usage
-
-Honoka は Bootstrap のテーマにしか過ぎないため、基本的な使い方は Bootstrap と変わりません。  Bootstrap のスタイルシートの読み込みを Honoka のスタイルシートに置き換えることで動作します。また JavaScript のコードは変更されていないので、 Bootstrap のものを使っても問題ありません。
-
-そのほか Bootstrap の機能の詳細については [Bootstrap のドキュメント](https://getbootstrap.com/docs/4.1/getting-started/introduction/) を参照してください。
-
-### Package
-
-配布している ZIP ファイルの内容物は以下のとおりです。 `bootstrap.min.css` といったように、ファイル名に `min` がついているファイルは、改行やインデント・スペーシングをなくした(minifyされた)コードで、ユーザがウェブページを読み込む際の転送量を少なくすることができます。通常はこの `bootstrap.min.*` を使うことをおすすめします。
-
-```
-honoka/
-├─ LICENSE
-├─ README.md
-├─ bootstrap.html
-├─ css/
-│  ├─ bootstrap.css
-│  └─ bootstrap.min.css
-└─ js/
-    ├─ bootstrap.bundle.js
-    ├─ bootstrap.bundle.min.js
-    ├─ bootstrap.js
-    └─ bootstrap.min.js
-```
-
-## Build
-
-ビルドの方法については [Wiki](https://github.com/windyakin/Honoka/wiki) をご覧ください。
-
-## License
-
-[MIT License](LICENSE)
-
-## Author
-
-* windyakin ([@MITLicense](https://twitter.com/MITLicense))
+MIT License. Bootstrap および Honoka と同じライセンスです。

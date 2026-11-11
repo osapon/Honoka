@@ -6,7 +6,7 @@
 
   <title>Honoka</title>
 
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.css?v=19">
   <style type="text/css">
   .bs-component + .bs-component {
     margin-top: 1rem;
@@ -48,28 +48,35 @@
       margin-bottom: 10px;
     }
   }
-  </style>
+  
+  .jumbotron {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+  }
+</style>
 </head>
 <body>
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="./">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABN5JREFUeNrsnN1R4zAQgEUm75cOzlQQd4BTwZm3eyNUAKkgUAFQgc3bvREqwKkAUwGmA18FnBbWcxpjWyt5JYexd0aTScCW8mm1P/IqQkwySR85+o6Dfv8jIvkSyrZQPi5ky49+i3yUgBDKmWxxDUxdStky2R4lrNQLIBzcFjsvZMcbz2Cg78jictCqjRzvzrkGyYE+4OyBgBqvZMelQzCgJTeyrRlud26rTSaAAvnyqnzkDJLsCyYi0SwlUzmWYy1ML5qRSX7ePFM+AiP5hDPNpjWyAZgHZjjCVhNnhv9/X3sfon3ggPMBnGlJsYkpoKzhs0s0pH3grBFO6PC7Fs4B4TJr6mjbA86NA3vzZWJtjfTM4pqmQCxCI25qb8DWXDrUGIByKuGsbG8yt7jmRXH3qlxAzGHgwl0sKYByjhE1i3e1AdTWsYkdWigwo44vWzRMQtzlRCSYjJP4nGmJCRNtqNkyky+USe2DWCwwHJs3L0ZJC1xLV9oQHDQgFwNskL8df1seAqBiYEBdSzIcHJBNPuNRQs7Ux9ZIC58q3jBBYKi7BPLDUtGoRYMhh72iqyEALQ5Biwh/B00TFEjGgLhV2LDfEFvBYO9gd/LKhQaFnoBE2NcSg0luBxAAdF3EPRcHIggE2okQXuKpyuvm3IAWjEsmRiCx8G+/SsoTkEGWGPN+s62QEuvZECODdS8bZN3HmH3vOpJgds0RBpv4Nhp0wggKvFGKrdp2jdAwh4wOoaziH5gMk2D3YIw0AsvrRhOhBQjrhwIt0qQj11Vg6TuSjgaCtquBe++4bM+1L2Rkg4YKEi3k51DJqs4m7D1CyHzsKpgCCsTIZALEDEi3nVFOGtQt+dgBhdMSa3fxFDijXmLaGIi7PvC7AYrECMUEkC46zccOSOfByrED0i2xwvPYo4MBRKz9eRuzBlEAjXqJUdR51Eb65zfTIDZ7OOdaYi6CRLR9NnvTb74BRb60B1Oa6tBKMLQqzgkDpmyz5gxgYBJsD63UZUl5rMxlg5wmqaAxskHF6xNjbAPa9yrve+kDEEXNXyzhXMmXZ0dB38fTW6jF7vOwgQtQYQEnEUznPAjaZH3ohgJoyQ0INWft0dZan0yaEVXVCBAcTmkbDLrurfAv1Wki/0tMfdaNSyfpMO6J4Rgz8VmJAYf3jqD1gYSHZ1jjoICqPbqlg9pDMcjgFe9kS+uFBgzF6nB8a089x8pRvFAoX/5C878XhPtBTHXaUYHxi2HMiRxvRomTOOuDbgj2KiTAXmnKUziMe1XAxWKDtB4KTwzGDEHnrmtWsR/dJGSCdkBmTdnn4gAUthje3MIjxh3ejzrrUCR1T9SkLQegPUFdvxjZFk3QzWzQFK8oB34pIccOy+sKohYt+gJKLdb4rkdSCzCewSNiSzAdoeSEqtejalHcC1DDeXmKtA3ujnh9FUxuDYwyaOy18v7WoK/eXuzaAE7eVv6GsG+FG9mo3g+XeO++SIDwC1M72xBgc+8+pi1lvZS+Uq44iNLZra54Emd2xQgpxZrrrr7axnSuKwk2ymswbnhu8SZGP3aC3iMhxk/GcBr6gxTlTPw/n3FHqZc2TvxaXK71L8HgL71shdnGfCF6/i4QVawyY9SkKmPf4WB77f8i+OpwS9NJwcqbPvoAM8kkPPJPgAEAyEmTr+M2lQ0AAAAASUVORK5CYII=" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
+      <a class="navbar-brand" href="../index.html">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABN5JREFUeNrsnN1R4zAQgEUm75cOzlQQd4BTwZm3eyNUAKkgUAFQgc3bvREqwKkAUwGmA18FnBbWcxpjWyt5JYexd0aTScCW8mm1P/IqQkwySR85+o6Dfv8jIvkSyrZQPi5ky49+i3yUgBDKmWxxDUxdStky2R4lrNQLIBzcFjsvZMcbz2Cg78jictCqjRzvzrkGyYE+4OyBgBqvZMelQzCgJTeyrRlud26rTSaAAvnyqnzkDJLsCyYi0SwlUzmWYy1ML5qRSX7ePFM+AiP5hDPNpjWyAZgHZjjCVhNnhv9/X3sfon3ggPMBnGlJsYkpoKzhs0s0pH3grBFO6PC7Fs4B4TJr6mjbA86NA3vzZWJtjfTM4pqmQCxCI25qb8DWXDrUGIByKuGsbG8yt7jmRXH3qlxAzGHgwl0sKYByjhE1i3e1AdTWsYkdWigwo44vWzRMQtzlRCSYjJP4nGmJCRNtqNkyky+USe2DWCwwHJs3L0ZJC1xLV9oQHDQgFwNskL8df1seAqBiYEBdSzIcHJBNPuNRQs7Ux9ZIC58q3jBBYKi7BPLDUtGoRYMhh72iqyEALQ5Biwh/B00TFEjGgLhV2LDfEFvBYO9gd/LKhQaFnoBE2NcSg0luBxAAdF3EPRcHIggE2okQXuKpyuvm3IAWjEsmRiCx8G+/SsoTkEGWGPN+s62QEuvZECODdS8bZN3HmH3vOpJgds0RBpv4Nhp0wggKvFGKrdp2jdAwh4wOoaziH5gMk2D3YIw0AsvrRhOhBQjrhwIt0qQj11Vg6TuSjgaCtquBe++4bM+1L2Rkg4YKEi3k51DJqs4m7D1CyHzsKpgCCsTIZALEDEi3nVFOGtQt+dgBhdMSa3fxFDijXmLaGIi7PvC7AYrECMUEkC46zccOSOfByrED0i2xwvPYo4MBRKz9eRuzBlEAjXqJUdR51Eb65zfTIDZ7OOdaYi6CRLR9NnvTb74BRb60B1Oa6tBKMLQqzgkDpmyz5gxgYBJsD63UZUl5rMxlg5wmqaAxskHF6xNjbAPa9yrve+kDEEXNXyzhXMmXZ0dB38fTW6jF7vOwgQtQYQEnEUznPAjaZH3ohgJoyQ0INWft0dZan0yaEVXVCBAcTmkbDLrurfAv1Wki/0tMfdaNSyfpMO6J4Rgz8VmJAYf3jqD1gYSHZ1jjoICqPbqlg9pDMcjgFe9kS+uFBgzF6nB8a089x8pRvFAoX/5C878XhPtBTHXaUYHxi2HMiRxvRomTOOuDbgj2KiTAXmnKUziMe1XAxWKDtB4KTwzGDEHnrmtWsR/dJGSCdkBmTdnn4gAUthje3MIjxh3ejzrrUCR1T9SkLQegPUFdvxjZFk3QzWzQFK8oB34pIccOy+sKohYt+gJKLdb4rkdSCzCewSNiSzAdoeSEqtejalHcC1DDeXmKtA3ujnh9FUxuDYwyaOy18v7WoK/eXuzaAE7eVv6GsG+FG9mo3g+XeO++SIDwC1M72xBgc+8+pi1lvZS+Uq44iNLZra54Emd2xQgpxZrrrr7axnSuKwk2ymswbnhu8SZGP3aC3iMhxk/GcBr6gxTlTPw/n3FHqZc2TvxaXK71L8HgL71shdnGfCF6/i4QVawyY9SkKmPf4WB77f8i+OpwS9NJwcqbPvoAM8kkPPJPgAEAyEmTr+M2lQ0AAAAASUVORK5CYII=" width="30" height="30" class="d-inline-block align-top me-1" alt="">
         Honoka
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="./">Top <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.html">Top <span class="visually-hidden">(current)</span></a>
           </li>
-          <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Live demo
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -114,14 +121,14 @@
         <div class="bs-component">
           <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="#">サイト</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarColor01">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">トップ <span class="sr-only">(current)</span></a>
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">トップ <span class="visually-hidden">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">リンク</a>
@@ -130,7 +137,7 @@
                   <a class="nav-link" href="#">リンク</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     サブメニュー
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -140,8 +147,8 @@
                   </div>
                 </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <form class="d-flex flex-nowrap align-items-center my-2 my-lg-0">
+                <input class="form-control me-sm-2" type="text" placeholder="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">検索</button>
               </form>
             </div>
@@ -151,14 +158,14 @@
         <div class="bs-component">
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">サイト</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarColor02">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">トップ <span class="sr-only">(current)</span></a>
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">トップ <span class="visually-hidden">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">リンク</a>
@@ -167,7 +174,7 @@
                   <a class="nav-link" href="#">リンク</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     サブメニュー
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -177,8 +184,8 @@
                   </div>
                 </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <form class="d-flex flex-nowrap align-items-center my-2 my-lg-0">
+                <input class="form-control me-sm-2" type="text" placeholder="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">検索</button>
               </form>
             </div>
@@ -188,14 +195,14 @@
         <div class="bs-component">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">サイト</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarColor03">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">トップ <span class="sr-only">(current)</span></a>
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">トップ <span class="visually-hidden">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">リンク</a>
@@ -204,7 +211,7 @@
                   <a class="nav-link" href="#">リンク</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     サブメニュー
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -214,8 +221,8 @@
                   </div>
                 </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <form class="d-flex flex-nowrap align-items-center my-2 my-lg-0">
+                <input class="form-control me-sm-2" type="text" placeholder="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">検索</button>
               </form>
             </div>
@@ -274,7 +281,7 @@
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
             <button type="button" class="btn btn-primary">Primary</button>
             <div class="btn-group" role="group">
-              <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
               <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                 <a class="dropdown-item" href="#">Dropdown link</a>
                 <a class="dropdown-item" href="#">Dropdown link</a>
@@ -285,7 +292,7 @@
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
             <button type="button" class="btn btn-success">Success</button>
             <div class="btn-group" role="group">
-              <button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
               <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
                 <a class="dropdown-item" href="#">Dropdown link</a>
                 <a class="dropdown-item" href="#">Dropdown link</a>
@@ -296,7 +303,7 @@
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
             <button type="button" class="btn btn-info">Info</button>
             <div class="btn-group" role="group">
-              <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
               <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
                 <a class="dropdown-item" href="#">Dropdown link</a>
                 <a class="dropdown-item" href="#">Dropdown link</a>
@@ -307,7 +314,7 @@
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
             <button type="button" class="btn btn-danger">Danger</button>
             <div class="btn-group" role="group">
-              <button id="btnGroupDrop4" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <button id="btnGroupDrop4" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
               <div class="dropdown-menu" aria-labelledby="btnGroupDrop4">
                 <a class="dropdown-item" href="#">Dropdown link</a>
                 <a class="dropdown-item" href="#">Dropdown link</a>
@@ -326,45 +333,39 @@
       <div class="col-lg-5">
 
         <p class="bs-component">
-          <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+          <button type="button" class="btn btn-primary btn-lg w-100 d-block">Block level button</button>
         </p>
 
         <div class="bs-component" style="margin-bottom: 15px;">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-primary active">
-              <input type="checkbox" checked autocomplete="off"> Active
-            </label>
-            <label class="btn btn-primary">
-              <input type="checkbox" autocomplete="off"> Check
-            </label>
-            <label class="btn btn-primary">
-              <input type="checkbox" autocomplete="off"> Check
-            </label>
+          <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" checked>
+            <label class="btn btn-primary" for="btncheck1">Active</label>
+            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+            <label class="btn btn-primary" for="btncheck2">Check</label>
+            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+            <label class="btn btn-primary" for="btncheck3">Check</label>
           </div>
         </div>
 
         <div class="bs-component" style="margin-bottom: 15px;">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-primary active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name="options" id="option2" autocomplete="off"> Radio
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name="options" id="option3" autocomplete="off"> Radio
-            </label>
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+            <label class="btn btn-primary" for="option1">Active</label>
+            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+            <label class="btn btn-primary" for="option2">Radio</label>
+            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+            <label class="btn btn-primary" for="option3">Radio</label>
           </div>
         </div>
 
         <div class="bs-component">
-          <div class="btn-group-vertical" data-toggle="buttons">
-            <button type="button" class="btn btn-primary">Button</button>
-            <button type="button" class="btn btn-primary">Button</button>
-            <button type="button" class="btn btn-primary">Button</button>
-            <button type="button" class="btn btn-primary">Button</button>
-            <button type="button" class="btn btn-primary">Button</button>
-            <button type="button" class="btn btn-primary">Button</button>
+          <div class="btn-group-vertical">
+            <button type="button" class="btn btn-primary" data-bs-toggle="button">Button</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="button">Button</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="button">Button</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="button">Button</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="button">Button</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="button">Button</button>
           </div>
         </div>
 
@@ -378,13 +379,13 @@
 
         <div class="bs-component" style="margin-bottom: 15px;">
           <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group mr-2" role="group" aria-label="First group">
+            <div class="btn-group me-2" role="group" aria-label="First group">
               <button type="button" class="btn btn-secondary">1</button>
               <button type="button" class="btn btn-secondary">2</button>
               <button type="button" class="btn btn-secondary">3</button>
               <button type="button" class="btn btn-secondary">4</button>
             </div>
-            <div class="btn-group mr-2" role="group" aria-label="Second group">
+            <div class="btn-group me-2" role="group" aria-label="Second group">
               <button type="button" class="btn btn-secondary">5</button>
               <button type="button" class="btn btn-secondary">6</button>
               <button type="button" class="btn btn-secondary">7</button>
@@ -423,7 +424,7 @@
           <h6>見出しTitle 6</h6>
           <h3>
             見出し
-            <small class="text-muted">サブテキスト</small>
+            <small class="text-body-secondary">サブテキスト</small>
           </h3>
           <p class="lead">色は匂へど散りぬるを 我が世誰そ常ならむ。</p>
         </div>
@@ -442,7 +443,7 @@
       <div class="col-lg-4">
         <div class="bs-component">
           <h2>Emphasis classes</h2>
-          <p class="text-muted">春はあけぼの。やうやう白くなりゆく山際、少しあかりて、紫だちたる雲の細くたなびきたる。</p>
+          <p class="text-body-secondary">春はあけぼの。やうやう白くなりゆく山際、少しあかりて、紫だちたる雲の細くたなびきたる。</p>
           <p class="text-primary">夏は夜。月の頃はさらなり。闇もなほ、蛍のおほく飛びちがひたる。</p>
           <p class="text-warning">また、ただ一つ二つなど、ほのかにうち光りて行くもをかし。雨など降るもをかし。</p>
           <p class="text-danger">秋は夕暮れ。夕日のさして山の端いと近うなりたるに、烏の、寝どころへ行くとて、三つ四つ、二つ三つなど飛び急ぐさへあはれなり。</p>
@@ -479,7 +480,7 @@
       </div>
       <div class="col-lg-4">
         <div class="bs-component">
-          <blockquote class="blockquote text-right">
+          <blockquote class="blockquote text-end">
             <p class="mb-0">BootstrapはWebサイトやWebアプリケーションを作成するフリーソフトウェアツール集である。タイポグラフィ、フォーム、ボタン、ナビゲーション、その他構成要素やJavaScript用拡張などがHTML及びCSSベースのデザインテンプレートとして用意されている。</p>
             <footer class="blockquote-footer">出典 <cite title="Bootstrap - Wikipedia">Bootstrap - Wikipedia</cite></footer>
           </blockquote>
@@ -593,23 +594,23 @@
           <form>
             <fieldset>
               <legend>Legend</legend>
-              <div class="form-group row">
+              <div class="mb-3 row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
                   <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">メールアドレス</label>
+              <div class="mb-3">
+                <label class="form-label" for="exampleInputEmail1">メールアドレス</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">ここで入力したメールアドレスは公開されません</small>
+                <small id="emailHelp" class="form-text text-body-secondary">ここで入力したメールアドレスは公開されません</small>
               </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">パスワード</label>
+              <div class="mb-3">
+                <label class="form-label" for="exampleInputPassword1">パスワード</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div>
-              <div class="form-group">
-                <label for="exampleSelect1">選択</label>
+              <div class="mb-3">
+                <label class="form-label" for="exampleSelect1">選択</label>
                 <select class="form-control" id="exampleSelect1">
                   <option>高坂穂乃果</option>
                   <option>絢瀬絵里</option>
@@ -622,8 +623,8 @@
                   <option>矢澤にこ</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="exampleSelect2">複数選択</label>
+              <div class="mb-3">
+                <label class="form-label" for="exampleSelect2">複数選択</label>
                 <select multiple class="form-control" id="exampleSelect2">
                   <option>高坂穂乃果</option>
                   <option>絢瀬絵里</option>
@@ -636,16 +637,16 @@
                   <option>矢澤にこ</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="exampleTextarea">テキストエリア</label>
+              <div class="mb-3">
+                <label class="form-label" for="exampleTextarea">テキストエリア</label>
                 <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
               </div>
-              <div class="form-group">
-                <label for="exampleInputFile">ファイル選択</label>
-                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                <small id="fileHelp" class="form-text text-muted">上にある入力欄に関するブロックレベルのヘルプテキストです。少し薄い文字色で表示されて、1行に収まらない場合は折り返して表示されます。</small>
+              <div class="mb-3">
+                <label class="form-label" for="exampleInputFile">ファイル選択</label>
+                <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp">
+                <small id="fileHelp" class="form-text text-body-secondary">上にある入力欄に関するブロックレベルのヘルプテキストです。少し薄い文字色で表示されて、1行に収まらない場合は折り返して表示されます。</small>
               </div>
-              <fieldset class="form-group">
+              <fieldset class="mb-3">
                 <legend>ラジオボタン</legend>
                 <div class="form-check">
                   <label class="form-check-label">
@@ -666,7 +667,7 @@
                   </label>
                 </div>
               </fieldset>
-              <fieldset class="form-group">
+              <fieldset class="mb-3">
                 <legend>チェックボックス</legend>
                 <div class="form-check">
                   <label class="form-check-label">
@@ -681,10 +682,10 @@
                   </label>
                 </div>
               </fieldset>
-              <fieldset class="form-group">
+              <fieldset class="mb-3">
                 <legend>スライダー</legend>
-                <label for="customRange1">レンジ</label>
-                <input type="range" class="custom-range" id="customRange1">
+                <label class="form-label" for="customRange1">レンジ</label>
+                <input type="range" class="form-range" id="customRange1">
               </fieldset>
               <button type="submit" class="btn btn-primary">送信</button>
             </fieldset>
@@ -694,58 +695,54 @@
       <div class="col-lg-4 offset-lg-1">
 
         <form class="bs-component">
-          <div class="form-group">
+          <div class="mb-3">
             <fieldset disabled>
-              <label class="control-label" for="disabledInput">Disabled 入力欄</label>
+              <label class="control-label form-label" for="disabledInput">Disabled 入力欄</label>
               <input class="form-control" id="disabledInput" type="text" placeholder="Disabled の入力欄です" disabled="">
             </fieldset>
           </div>
 
-          <div class="form-group">
+          <div class="mb-3">
             <fieldset>
-              <label class="control-label" for="readOnlyInput">Readonly 入力欄</label>
+              <label class="control-label form-label" for="readOnlyInput">Readonly 入力欄</label>
               <input class="form-control" id="readOnlyInput" type="text" placeholder="Readonly の入力欄です" readonly>
             </fieldset>
           </div>
 
-          <div class="form-group has-success">
-            <label class="form-control-label" for="inputSuccess1">Valid input</label>
+          <div class="mb-3 has-success">
+            <label class="form-control-label form-label" for="inputSuccess1">Valid input</label>
             <input type="text" value="elichica" class="form-control is-valid" id="inputValid">
             <div class="valid-feedback">入力したIDは使用可能です</div>
           </div>
 
-          <div class="form-group has-danger">
-            <label class="form-control-label" for="inputDanger1">Invalid input</label>
+          <div class="mb-3 has-danger">
+            <label class="form-control-label form-label" for="inputDanger1">Invalid input</label>
             <input type="text" value="elichica" class="form-control is-invalid" id="inputInvalid">
             <div class="invalid-feedback">入力したIDは既に使用済みです</div>
           </div>
 
-          <div class="form-group">
+          <div class="mb-3">
             <label class="col-form-label col-form-label-lg" for="inputLarge">大きい入力欄</label>
             <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" id="inputLarge">
           </div>
 
-          <div class="form-group">
+          <div class="mb-3">
             <label class="col-form-label" for="inputDefault">通常の入力欄</label>
             <input type="text" class="form-control" placeholder="Default input" id="inputDefault">
           </div>
 
-          <div class="form-group">
+          <div class="mb-3">
             <label class="col-form-label col-form-label-sm" for="inputSmall">小さい入力欄</label>
             <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" id="inputSmall">
           </div>
 
-          <div class="form-group">
-            <label class="control-label">Input addons</label>
-            <div class="form-group">
+          <div class="mb-3">
+            <label class="control-label form-label">Input addons</label>
+            <div class="mb-3">
               <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">&yen;</span>
-                </div>
+                <span class="input-group-text">&yen;</span>
                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                <div class="input-group-append">
-                  <span class="input-group-text">百万円</span>
-                </div>
+                <span class="input-group-text">百万円</span>
               </div>
             </div>
           </div>
@@ -754,57 +751,52 @@
         <div class="bs-component">
           <fieldset>
             <legend>Custom forms</legend>
-            <div class="form-group">
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
-                <label class="custom-control-label" for="customRadio1">Custom forms を利用すると</label>
+            <div class="mb-3">
+              <div class="form-check">
+                <input type="radio" id="customRadio1" name="customRadio" class="form-check-input" checked>
+                <label class="form-check-label" for="customRadio1">Custom forms を利用すると</label>
               </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label" for="customRadio2">全OSで共通のデザインになります</label>
+              <div class="form-check">
+                <input type="radio" id="customRadio2" name="customRadio" class="form-check-input">
+                <label class="form-check-label" for="customRadio2">全OSで共通のデザインになります</label>
               </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" disabled>
-                <label class="custom-control-label" for="customRadio3">選択できない選択肢</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                <label class="custom-control-label" for="customCheck1">チェックボックスも同様です</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck2" disabled>
-                <label class="custom-control-label" for="customCheck2">選択できない選択肢</label>
+              <div class="form-check">
+                <input type="radio" id="customRadio3" name="customRadio" class="form-check-input" disabled>
+                <label class="form-check-label" for="customRadio3">選択できない選択肢</label>
               </div>
             </div>
-            <div class="form-group">
-              <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
-                <label class="custom-control-label" for="customSwitch1">トグルスイッチ</label>
+            <div class="mb-3">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="customCheck1" checked>
+                <label class="form-check-label" for="customCheck1">チェックボックスも同様です</label>
               </div>
-              <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" disabled="" id="customSwitch2">
-                <label class="custom-control-label" for="customSwitch2">選択できないトグルスイッチ</label>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="customCheck2" disabled>
+                <label class="form-check-label" for="customCheck2">選択できない選択肢</label>
               </div>
             </div>
-            <div class="form-group">
-              <select class="custom-select">
+            <div class="mb-3">
+              <div class="form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="customSwitch1" checked="">
+                <label class="form-check-label" for="customSwitch1">トグルスイッチ</label>
+              </div>
+              <div class="form-check form-switch">
+                <input type="checkbox" class="form-check-input" disabled="" id="customSwitch2">
+                <label class="form-check-label" for="customSwitch2">選択できないトグルスイッチ</label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <select class="form-select">
                 <option selected>選択してください</option>
                 <option value="1">Pritemps</option>
                 <option value="2">BiBi</option>
                 <option value="3">lily white</option>
               </select>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
               <div class="input-group mb-3">
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="inputGroupFile02">
-                  <label class="custom-file-label" for="inputGroupFile02">ファイルを選択</label>
-                </div>
-                <div class="input-group-append">
-                  <span class="input-group-text" id="">アップロード</span>
-                </div>
+                <input type="file" class="form-control" id="inputGroupFile02" aria-label="ファイルを選択">
+                <span class="input-group-text">アップロード</span>
               </div>
             </div>
           </fieldset>
@@ -832,43 +824,43 @@
         <div class="bs-component">
           <ul class="nav nav-tabs">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#home">坊っちゃん</a>
+              <a class="nav-link active" data-bs-toggle="tab" href="#home" role="tab">坊っちゃん</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#profile">愚見数則</a>
+              <a class="nav-link" data-bs-toggle="tab" href="#profile" role="tab">愚見数則</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#">人間失格</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">宮沢賢治</a>
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">宮沢賢治</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" data-toggle="tab" href="#dropdown1">雨ニモマケズ</a>
-                <a class="dropdown-item" data-toggle="tab" href="#dropdown2">春と修羅(序)</a>
-                <a class="dropdown-item" data-toggle="tab" href="#dropdown3">銀河鉄道の夜</a>
+                <a class="dropdown-item" data-bs-toggle="tab" href="#dropdown1" role="tab">雨ニモマケズ</a>
+                <a class="dropdown-item" data-bs-toggle="tab" href="#dropdown2" role="tab">春と修羅(序)</a>
+                <a class="dropdown-item" data-bs-toggle="tab" href="#dropdown3" role="tab">銀河鉄道の夜</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" data-toggle="tab" href="#dropdown4">よだかの星</a>
+                <a class="dropdown-item" data-bs-toggle="tab" href="#dropdown4" role="tab">よだかの星</a>
               </div>
             </li>
           </ul>
           <div id="myTabContent" class="tab-content">
-            <div class="tab-pane fade show active" id="home">
+            <div class="tab-pane fade show active" id="home" role="tabpanel">
               <p>親讓りの無鐵砲で小供の時から損ばかりして居る。小學校に居る時分學校の二階から飛び降りて一週間程腰を拔かした事がある。なぜそんな無闇（むやみ）をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出して居たら、同級生の一人が冗談に、いくら威張つても、そこから飛び降りる事は出來まい。弱虫やーい。と囃（はや）したからである。小使（こづかひ）に負ぶさつて歸つて來た時、おやぢが大きな眼をして二階位（にかいぐらゐ）から飛び降りて腰を拔かす奴があるかと云つたから、此次（このつぎ）は拔かさずに飛んで見せますと答へた。</p>
             </div>
-            <div class="tab-pane fade" id="profile">
+            <div class="tab-pane fade" id="profile" role="tabpanel">
               <p>昔しの書生は、笈を負ひて四方に遊歴し、此人ならばと思ふ先生の許に落付く、故に先生を敬ふ事、父兄に過ぎたり、先生も亦弟子に対する事、真の子の如し、是でなくては真の教育といふ事は出来ぬなり、今の書生は学校を旅屋の如く思ふ、金を出して暫らく逗留するに過ぎず、厭になればすぐに宿を移す、かゝる生徒に対する校長は、宿屋の主人の如く、教師は番頭丁稚なり、主人たる校長すら、時には御客の機嫌を取らねばならず、況んや番頭丁稚をや、薫陶所か解雇されざるを以て幸福と思ふ位なり、生徒の増長し教員の下落するは当前の事なり。</p>
             </div>
-            <div class="tab-pane fade" id="dropdown1">
+            <div class="tab-pane fade" id="dropdown1" role="tabpanel">
               <p>雨ニモマケズ 風ニモマケズ 雪ニモ夏ノ暑サニモマケヌ 丈夫ナカラダヲモチ 慾ハナク 決シテ瞋ラズ イツモシズカニワラッテイル 一日ニ玄米四合ト 味噌ト少シノ野菜ヲタベ アラユルコトヲ ジブンヲカンジョウニ入レズニ ヨクミキキシワカリ ソシテワスレズ</p>
             </div>
-            <div class="tab-pane fade" id="dropdown2">
+            <div class="tab-pane fade" id="dropdown2" role="tabpanel">
               <p>わたくしといふ現象は 假定された有機交流電燈の ひとつの青い照明です （あらゆる透明な幽霊の複合体） 風景やみんなといっしょに せはしくせはしく明滅しながら いかにもたしかにともりつづける 因果交流電燈の ひとつの青い照明です （ひかりはたもち、その電燈は失はれ）</p>
             </div>
-            <div class="tab-pane fade" id="dropdown3">
+            <div class="tab-pane fade" id="dropdown3" role="tabpanel">
               <p>「ではみなさんは、さういふふうに川だと云はれたり、乳の流れたあとだと云はれたりしてゐたこのぼんやりと白いものがほんたうは何かご承知ですか。」先生は、黒板に吊した大きな黒い星座の図の、上から下へ白くけぶった銀河帯のやうなところを指しながら、みんなに問をかけました。</p>
               <p>カムパネルラが手をあげました。それから四五人手をあげました。ジョバンニも手をあげやうとして、急いでそのまゝやめました。たしかにあれがみんな星だと、いつか雑誌で読んだのでしたが、このごろはジョバンニはまるで毎日教室でもねむく、本を読むひまも読む本もないので、なんだかどんなこともよくわからないといふ気持ちがするのでした。</p>
             </div>
-            <div class="tab-pane fade" id="dropdown4">
+            <div class="tab-pane fade" id="dropdown4" role="tabpanel">
               <p>よだかは、実にみにくい鳥です。</p>
               <p>顔は、ところどころ、味噌をつけたようにまだらで、くちばしは、ひらたくて、耳までさけています。</p>
               <p>足は、まるでよぼよぼで、一間とも歩けません。</p>
@@ -886,7 +878,7 @@
               <a class="nav-link active" href="#">Active</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
@@ -910,7 +902,7 @@
               <a class="nav-link active" href="#">Active</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
@@ -1052,7 +1044,7 @@
         <h2>Alerts</h2>
         <div class="bs-component">
           <div class="alert alert-dismissible alert-warning">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             <h4 class="alert-heading">Warning!</h4>
             <p class="mb-0">要求された処理は正常に完了できませんでした。このエラーについての詳細は<a href="#" class="alert-link">こちらのドキュメントを参照してください</a>。</p>
           </div>
@@ -1063,7 +1055,7 @@
       <div class="col-lg-4">
         <div class="bs-component">
           <div class="alert alert-dismissible alert-danger">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             <strong>エラー</strong> <a href="#" class="alert-link">いくつかの項目を見直して</a> 再度投稿してください
           </div>
         </div>
@@ -1071,7 +1063,7 @@
       <div class="col-lg-4">
         <div class="bs-component">
           <div class="alert alert-dismissible alert-success">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             <strong>完了</strong> 記事「<a href="#" class="alert-link">国立音ノ木坂学院について</a>」を公開しました
           </div>
         </div>
@@ -1079,7 +1071,7 @@
       <div class="col-lg-4">
         <div class="bs-component">
           <div class="alert alert-dismissible alert-info">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             <strong>Tips</strong> 生徒手帳には<a href="#" class="alert-link">講堂の使用には許可が必要</a>と書いてあります
           </div>
         </div>
@@ -1088,24 +1080,24 @@
     <div>
       <h2>Badges</h2>
       <div class="bs-component" style="margin-bottom: 40px;">
-        <span class="badge badge-primary">Primary</span>
-        <span class="badge badge-secondary">Secondary</span>
-        <span class="badge badge-success">Success</span>
-        <span class="badge badge-danger">Danger</span>
-        <span class="badge badge-warning">Warning</span>
-        <span class="badge badge-info">Info</span>
-        <span class="badge badge-light">Light</span>
-        <span class="badge badge-dark">Dark</span>
+        <span class="badge text-bg-primary">Primary</span>
+        <span class="badge text-bg-secondary">Secondary</span>
+        <span class="badge text-bg-success">Success</span>
+        <span class="badge text-bg-danger">Danger</span>
+        <span class="badge text-bg-warning">Warning</span>
+        <span class="badge text-bg-info">Info</span>
+        <span class="badge text-bg-light">Light</span>
+        <span class="badge text-bg-dark">Dark</span>
       </div>
       <div class="bs-component">
-        <span class="badge badge-pill badge-primary">Primary</span>
-        <span class="badge badge-pill badge-secondary">Secondary</span>
-        <span class="badge badge-pill badge-success">Success</span>
-        <span class="badge badge-pill badge-danger">Danger</span>
-        <span class="badge badge-pill badge-warning">Warning</span>
-        <span class="badge badge-pill badge-info">Info</span>
-        <span class="badge badge-pill badge-light">Light</span>
-        <span class="badge badge-pill badge-dark">Dark</span>
+        <span class="badge rounded-pill text-bg-primary">Primary</span>
+        <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+        <span class="badge rounded-pill text-bg-success">Success</span>
+        <span class="badge rounded-pill text-bg-danger">Danger</span>
+        <span class="badge rounded-pill text-bg-warning">Warning</span>
+        <span class="badge rounded-pill text-bg-info">Info</span>
+        <span class="badge rounded-pill text-bg-light">Light</span>
+        <span class="badge rounded-pill text-bg-dark">Dark</span>
       </div>
     </div>
   </section>
@@ -1198,31 +1190,31 @@
         <h3 id="spinners-border">Border Spinners</h3>
         <div class="bs-component d-flex justify-content-around">
           <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-border text-primary" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-border text-secondary" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-border text-success" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-border text-danger" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-border text-warning" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-border text-info" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-border text-light" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-border text-dark" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
         </div>
       </div>
@@ -1231,31 +1223,31 @@
         <h3 id="spinners-growing">Growing spinners</h3>
         <div class="bs-component d-flex justify-content-around">
           <div class="spinner-grow" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-grow text-primary" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-grow text-secondary" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-grow text-success" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-grow text-danger" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-grow text-warning" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-grow text-info" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-grow text-light" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
           <div class="spinner-grow text-dark" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
           </div>
         </div>
       </div>
@@ -1298,15 +1290,15 @@
           <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-center">
               夢なき夢は夢じゃない
-              <span class="badge badge-primary badge-pill">14</span>
+              <span class="badge text-bg-primary rounded-pill">14</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Anemone heart
-              <span class="badge badge-primary badge-pill">2</span>
+              <span class="badge text-bg-primary rounded-pill">2</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               なわとび
-              <span class="badge badge-primary badge-pill">1</span>
+              <span class="badge text-bg-primary rounded-pill">1</span>
             </li>
           </ul>
         </div>
@@ -1340,10 +1332,10 @@
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">UTX学園</h5>
-                <small class="text-muted">3 days ago</small>
+                <small class="text-body-secondary">3 days ago</small>
               </div>
               <p class="mb-1">秋葉原に在する、周辺地域で一番人気のエスカレーター式の高校。現在も生徒をたくさん集めている。その校舎は秋葉原UDXビルをモデルにしている。</p>
-              <small class="text-muted">スクールアイドルグループ「A-RISE」</small>
+              <small class="text-body-secondary">スクールアイドルグループ「A-RISE」</small>
             </a>
           </div>
         </div>
@@ -1498,10 +1490,10 @@
             <h3 class="card-header">News</h3>
             <div class="card-body">
               <h5 class="card-title">アイドル研究部(μ's)の海外ライブが放映されました</h5>
-              <h6 class="card-subtitle text-muted">米・ニューヨーク ブロードウェイにてパフォーマンスを披露</h6>
+              <h6 class="card-subtitle text-body-secondary">米・ニューヨーク ブロードウェイにてパフォーマンスを披露</h6>
             </div>
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/oWIE7GwJu3c?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="ratio ratio-16x9">
+              <iframe class="" src="https://www.youtube-nocookie.com/embed/oWIE7GwJu3c?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
             <div class="card-body">
               <p class="card-text">日本国内で注目されている「スクールアイドル」が米国でも注目され、米国のテレビ番組に前回ラブライブ！優勝チームであるμ’ｓが出演しました。</p>
@@ -1515,14 +1507,14 @@
               <a href="#" class="card-link">ラブライブ！公式</a>
               <a href="#" class="card-link">音ノ木坂学院</a>
             </div>
-            <div class="card-footer text-muted">
+            <div class="card-footer text-body-secondary">
               2日前
             </div>
           </div>
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">タイトル</h4>
-              <h6 class="card-subtitle mb-2 text-muted">サブタイトル</h6>
+              <h6 class="card-subtitle mb-2 text-body-secondary">サブタイトル</h6>
               <p class="card-text">ここに本文が入ります。カードはヘッダー・フッターがないスタイルもつくることができます。</p>
               <a href="#" class="card-link">リンク1</a>
               <a href="#" class="card-link">リンク2</a>
@@ -1554,16 +1546,14 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title">タイトル</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <p contenteditable>サンプルテキストサンプルテキストサンプルテキスト</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary">変更を保存</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
                 </div>
               </div>
             </div>
@@ -1573,12 +1563,10 @@
           <div class="bs-component d-flex justify-content-center p-md-4">
             <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
               <div class="toast-header">
-                <img class="bd-placeholder-img rounded mr-2" width="20" height="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABN5JREFUeNrsnN1R4zAQgEUm75cOzlQQd4BTwZm3eyNUAKkgUAFQgc3bvREqwKkAUwGmA18FnBbWcxpjWyt5JYexd0aTScCW8mm1P/IqQkwySR85+o6Dfv8jIvkSyrZQPi5ky49+i3yUgBDKmWxxDUxdStky2R4lrNQLIBzcFjsvZMcbz2Cg78jictCqjRzvzrkGyYE+4OyBgBqvZMelQzCgJTeyrRlud26rTSaAAvnyqnzkDJLsCyYi0SwlUzmWYy1ML5qRSX7ePFM+AiP5hDPNpjWyAZgHZjjCVhNnhv9/X3sfon3ggPMBnGlJsYkpoKzhs0s0pH3grBFO6PC7Fs4B4TJr6mjbA86NA3vzZWJtjfTM4pqmQCxCI25qb8DWXDrUGIByKuGsbG8yt7jmRXH3qlxAzGHgwl0sKYByjhE1i3e1AdTWsYkdWigwo44vWzRMQtzlRCSYjJP4nGmJCRNtqNkyky+USe2DWCwwHJs3L0ZJC1xLV9oQHDQgFwNskL8df1seAqBiYEBdSzIcHJBNPuNRQs7Ux9ZIC58q3jBBYKi7BPLDUtGoRYMhh72iqyEALQ5Biwh/B00TFEjGgLhV2LDfEFvBYO9gd/LKhQaFnoBE2NcSg0luBxAAdF3EPRcHIggE2okQXuKpyuvm3IAWjEsmRiCx8G+/SsoTkEGWGPN+s62QEuvZECODdS8bZN3HmH3vOpJgds0RBpv4Nhp0wggKvFGKrdp2jdAwh4wOoaziH5gMk2D3YIw0AsvrRhOhBQjrhwIt0qQj11Vg6TuSjgaCtquBe++4bM+1L2Rkg4YKEi3k51DJqs4m7D1CyHzsKpgCCsTIZALEDEi3nVFOGtQt+dgBhdMSa3fxFDijXmLaGIi7PvC7AYrECMUEkC46zccOSOfByrED0i2xwvPYo4MBRKz9eRuzBlEAjXqJUdR51Eb65zfTIDZ7OOdaYi6CRLR9NnvTb74BRb60B1Oa6tBKMLQqzgkDpmyz5gxgYBJsD63UZUl5rMxlg5wmqaAxskHF6xNjbAPa9yrve+kDEEXNXyzhXMmXZ0dB38fTW6jF7vOwgQtQYQEnEUznPAjaZH3ohgJoyQ0INWft0dZan0yaEVXVCBAcTmkbDLrurfAv1Wki/0tMfdaNSyfpMO6J4Rgz8VmJAYf3jqD1gYSHZ1jjoICqPbqlg9pDMcjgFe9kS+uFBgzF6nB8a089x8pRvFAoX/5C878XhPtBTHXaUYHxi2HMiRxvRomTOOuDbgj2KiTAXmnKUziMe1XAxWKDtB4KTwzGDEHnrmtWsR/dJGSCdkBmTdnn4gAUthje3MIjxh3ejzrrUCR1T9SkLQegPUFdvxjZFk3QzWzQFK8oB34pIccOy+sKohYt+gJKLdb4rkdSCzCewSNiSzAdoeSEqtejalHcC1DDeXmKtA3ujnh9FUxuDYwyaOy18v7WoK/eXuzaAE7eVv6GsG+FG9mo3g+XeO++SIDwC1M72xBgc+8+pi1lvZS+Uq44iNLZra54Emd2xQgpxZrrrr7axnSuKwk2ymswbnhu8SZGP3aC3iMhxk/GcBr6gxTlTPw/n3FHqZc2TvxaXK71L8HgL71shdnGfCF6/i4QVawyY9SkKmPf4WB77f8i+OpwS9NJwcqbPvoAM8kkPPJPgAEAyEmTr+M2lQ0AAAAASUVORK5CYII=">
-                <strong class="mr-auto">Honoka</strong>
+                <img class="bd-placeholder-img rounded me-2" width="20" height="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABN5JREFUeNrsnN1R4zAQgEUm75cOzlQQd4BTwZm3eyNUAKkgUAFQgc3bvREqwKkAUwGmA18FnBbWcxpjWyt5JYexd0aTScCW8mm1P/IqQkwySR85+o6Dfv8jIvkSyrZQPi5ky49+i3yUgBDKmWxxDUxdStky2R4lrNQLIBzcFjsvZMcbz2Cg78jictCqjRzvzrkGyYE+4OyBgBqvZMelQzCgJTeyrRlud26rTSaAAvnyqnzkDJLsCyYi0SwlUzmWYy1ML5qRSX7ePFM+AiP5hDPNpjWyAZgHZjjCVhNnhv9/X3sfon3ggPMBnGlJsYkpoKzhs0s0pH3grBFO6PC7Fs4B4TJr6mjbA86NA3vzZWJtjfTM4pqmQCxCI25qb8DWXDrUGIByKuGsbG8yt7jmRXH3qlxAzGHgwl0sKYByjhE1i3e1AdTWsYkdWigwo44vWzRMQtzlRCSYjJP4nGmJCRNtqNkyky+USe2DWCwwHJs3L0ZJC1xLV9oQHDQgFwNskL8df1seAqBiYEBdSzIcHJBNPuNRQs7Ux9ZIC58q3jBBYKi7BPLDUtGoRYMhh72iqyEALQ5Biwh/B00TFEjGgLhV2LDfEFvBYO9gd/LKhQaFnoBE2NcSg0luBxAAdF3EPRcHIggE2okQXuKpyuvm3IAWjEsmRiCx8G+/SsoTkEGWGPN+s62QEuvZECODdS8bZN3HmH3vOpJgds0RBpv4Nhp0wggKvFGKrdp2jdAwh4wOoaziH5gMk2D3YIw0AsvrRhOhBQjrhwIt0qQj11Vg6TuSjgaCtquBe++4bM+1L2Rkg4YKEi3k51DJqs4m7D1CyHzsKpgCCsTIZALEDEi3nVFOGtQt+dgBhdMSa3fxFDijXmLaGIi7PvC7AYrECMUEkC46zccOSOfByrED0i2xwvPYo4MBRKz9eRuzBlEAjXqJUdR51Eb65zfTIDZ7OOdaYi6CRLR9NnvTb74BRb60B1Oa6tBKMLQqzgkDpmyz5gxgYBJsD63UZUl5rMxlg5wmqaAxskHF6xNjbAPa9yrve+kDEEXNXyzhXMmXZ0dB38fTW6jF7vOwgQtQYQEnEUznPAjaZH3ohgJoyQ0INWft0dZan0yaEVXVCBAcTmkbDLrurfAv1Wki/0tMfdaNSyfpMO6J4Rgz8VmJAYf3jqD1gYSHZ1jjoICqPbqlg9pDMcjgFe9kS+uFBgzF6nB8a089x8pRvFAoX/5C878XhPtBTHXaUYHxi2HMiRxvRomTOOuDbgj2KiTAXmnKUziMe1XAxWKDtB4KTwzGDEHnrmtWsR/dJGSCdkBmTdnn4gAUthje3MIjxh3ejzrrUCR1T9SkLQegPUFdvxjZFk3QzWzQFK8oB34pIccOy+sKohYt+gJKLdb4rkdSCzCewSNiSzAdoeSEqtejalHcC1DDeXmKtA3ujnh9FUxuDYwyaOy18v7WoK/eXuzaAE7eVv6GsG+FG9mo3g+XeO++SIDwC1M72xBgc+8+pi1lvZS+Uq44iNLZra54Emd2xQgpxZrrrr7axnSuKwk2ymswbnhu8SZGP3aC3iMhxk/GcBr6gxTlTPw/n3FHqZc2TvxaXK71L8HgL71shdnGfCF6/i4QVawyY9SkKmPf4WB77f8i+OpwS9NJwcqbPvoAM8kkPPJPgAEAyEmTr+M2lQ0AAAAASUVORK5CYII=">
+                <strong class="me-auto">Honoka</strong>
                 <small>11分前</small>
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="btn-close ms-2 mb-1 " data-bs-dismiss="toast" aria-label="Close"></button>
               </div>
               <div class="toast-body">
                 これはToast型通知メッセージのサンプルです。
@@ -1591,23 +1579,23 @@
       <div class="col-lg-6">
         <h2>Popovers</h2>
         <div class="bs-component" style="margin-bottom: 3em;">
-          <button type="button" class="btn btn-secondary" title="タイトル" data-container="body" data-toggle="popover" data-placement="left" data-content="本文サンプル本文サンプル本文サンプル">Left</button>
+          <button type="button" class="btn btn-secondary" title="タイトル" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="本文サンプル本文サンプル本文サンプル">Left</button>
 
-          <button type="button" class="btn btn-secondary" title="タイトル" data-container="body" data-toggle="popover" data-placement="top" data-content="本文サンプル本文サンプル本文サンプル">Top</button>
+          <button type="button" class="btn btn-secondary" title="タイトル" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="本文サンプル本文サンプル本文サンプル">Top</button>
 
-          <button type="button" class="btn btn-secondary" title="タイトル" data-container="body" data-toggle="popover" data-placement="bottom" data-content="本文サンプル本文サンプル本文サンプル">Bottom</button>
+          <button type="button" class="btn btn-secondary" title="タイトル" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="本文サンプル本文サンプル本文サンプル">Bottom</button>
 
-          <button type="button" class="btn btn-secondary" title="タイトル" data-container="body" data-toggle="popover" data-placement="right" data-content="本文サンプル本文サンプル本文サンプル">Right</button>
+          <button type="button" class="btn btn-secondary" title="タイトル" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="本文サンプル本文サンプル本文サンプル">Right</button>
         </div>
         <h2>Tooltips</h2>
         <div class="bs-component">
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="左方向にでるTooltip">Left</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="左方向にでるTooltip">Left</button>
 
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="上方向にでるTooltip">Top</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="上方向にでるTooltip">Top</button>
 
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="下方向にでるTooltip">Bottom</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="下方向にでるTooltip">Bottom</button>
 
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="右方向にでるTooltip">Right</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="右方向にでるTooltip">Right</button>
         </div>
       </div>
     </div>
@@ -1616,27 +1604,19 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="./js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script type="text/javascript">
-  $('.bs-component [data-toggle="popover"]').popover();
-  $('.bs-component [data-toggle="tooltip"]').tooltip();
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('.bs-component [data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+  })
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('.bs-component [data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
 
-  $('#anti-yu-gothic-button').on('click', function() {
-    if ( $('body').hasClass('no-thank-yu') ) {
-      $('body').removeClass('no-thank-yu');
-      $(this).text('游ゴシックを無効にする').removeClass('btn-primary').addClass('btn-danger');
-      $("#anti-yu-gothic-message").html('現在デモページは游ゴシックの指定が<span class="text-primary">有効</span>になっています。');
-    }
-    else {
-      $('body').addClass('no-thank-yu');
-      $(this).text('游ゴシックを有効にする').removeClass('btn-danger').addClass('btn-primary');
-      $("#anti-yu-gothic-message").html('現在デモページは游ゴシックの指定が<span class="text-danger">無効</span>になっています。');
-    }
-  });
-</script>
+  </script>
 
 </body>
 </html>
