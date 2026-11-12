@@ -2,6 +2,29 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /* ---------------------------------------------------------------------------
+ * ダークモード対応用カスタムプロパティ
+ * --------------------------------------------------------------------------- */
+html {
+    --honoka-jumbotron-bg: #ffd699;
+    --honoka-jumbotron-color: #212529;
+    --honoka-jumbotron-basedon-color: #6c757d;
+    --honoka-jumbotron-basedon-shadow: #fff;
+    --honoka-social-bg: #e9ecef;
+    --honoka-section-default-bg: #fff;
+    --honoka-section-inverse-bg: #fff5e6;
+}
+
+html[data-bs-theme="dark"] {
+    --honoka-jumbotron-bg: #332211;
+    --honoka-jumbotron-color: #f8f9fa;
+    --honoka-jumbotron-basedon-color: #adb5bd;
+    --honoka-jumbotron-basedon-shadow: transparent;
+    --honoka-social-bg: #212529;
+    --honoka-section-default-bg: var(--bs-body-bg);
+    --honoka-section-inverse-bg: #2a1f15;
+}
+
+/* ---------------------------------------------------------------------------
  * カスタムボタン
  * --------------------------------------------------------------------------- */
 .btn-honoka {
@@ -216,7 +239,7 @@
 
 .social {
     padding: 1rem 0;
-    background: #e9ecef;
+    background: var(--honoka-social-bg);
 }
 
 /* ---------------------------------------------------------------------------
@@ -227,11 +250,13 @@
     min-height: 530px;
     margin-bottom: 0;
     overflow: hidden;
-    background-color: #ffd699;
+    color: var(--honoka-jumbotron-color);
+    background-color: var(--honoka-jumbotron-bg);
     background-image: url("../img/circle.png");
     background-repeat: no-repeat;
     background-position: -35% center;
     background-size: 70%;
+    transition: color .2s, background-color .2s;
 }
 
 .jumbotron.special .honoka {
@@ -264,8 +289,8 @@
 
 .jumbotron.special .basedon {
     margin: 0.5rem auto;
-    color: #6c757d;
-    text-shadow: #fff 0 1px 2px;
+    color: var(--honoka-jumbotron-basedon-color);
+    text-shadow: var(--honoka-jumbotron-basedon-shadow) 0 1px 2px;
 }
 
 /* ---------------------------------------------------------------------------
@@ -276,11 +301,11 @@
 }
 
 .section.section-default {
-    background-color: #fff;
+    background-color: var(--honoka-section-default-bg);
 }
 
 .section.section-inverse {
-    background-color: #fff5e6;
+    background-color: var(--honoka-section-inverse-bg);
 }
 
 .section .subtitle {

@@ -13,6 +13,7 @@ Bootstrap 5 向けの [Honoka](https://github.com/windyakin/Honoka) テーマ実
 ```bash
 npm install
 npm run build
+npm run build:min
 ```
 
 `dist/css/bootstrap.css` が生成されます。

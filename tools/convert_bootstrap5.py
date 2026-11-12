@@ -320,7 +320,7 @@ def add_jumbotron_style(html: str) -> str:
   .jumbotron {
     padding: 4rem 2rem;
     margin-bottom: 2rem;
-    background-color: #e9ecef;
+    background-color: var(--bs-secondary-bg);
     border-radius: .3rem;
   }
 '''
@@ -389,8 +389,89 @@ def remove_jquery_if_unused(html: str) -> str:
     return html
 
 
-def convert(html: str, is_docs: bool = True) -> str:
+def add_dark_mode_toggle(html: str, lang: str = 'en') -> str:
+    """ナビバーにダークモード切替スイッチを追加する。"""
+    label = 'ダーク' if lang == 'ja' else 'Dark'
+    aria = 'ダークモード' if lang == 'ja' else 'Dark mode'
+    toggle_html = (
+        f'        <div class="form-check form-switch ms-auto my-auto">\n'
+        f'          <input class="form-check-input" type="checkbox" id="theme-toggle" aria-label="{aria}">\n'
+        f'          <label class="form-check-label" for="theme-toggle">{label}</label>\n'
+        f'        </div>\n'
+    )
+    # トップナビバー内の navbar-nav me-auto の閉じタグ直後に挿入
+    # 構造: </ul> </div>(collapse) </div>(container) </nav>
+    html = re.sub(
+        r'(<ul class="navbar-nav me-auto">.*?</ul>)(\s*)(</div>\s*</div>\s*</nav>)',
+        r'\1\n' + toggle_html + r'      \3',
+        html,
+        count=1,
+        flags=re.DOTALL
+    )
+    return html
+
+
+def add_dark_mode_head_script(html: str) -> str:
+    """ページ描画前にテーマを復元するスクリプトを <head> 内に追加する。"""
+    script = '''\n  <script>\n  (function () {\n    const stored = localStorage.getItem('honoka-theme');\n    const theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');\n    document.documentElement.setAttribute('data-bs-theme', theme);\n    const mainNav = document.getElementById('honoka-main-nav');\n    if (mainNav) mainNav.setAttribute('data-bs-theme', theme);\n  })();\n  </script>'''
+    html = re.sub(r'(</head>)', script + r'\1', html, flags=re.DOTALL)
+    return html
+
+
+def add_dark_mode_script(html: str) -> str:
+    """ダークモード切替の JS を </body> 直前に追加する。"""
+    script = '''
+    <script>
+    (function () {
+      const html = document.documentElement;
+
+      function applyTheme(theme) {
+        html.setAttribute('data-bs-theme', theme);
+        const mainNav = document.getElementById('honoka-main-nav');
+        if (mainNav) mainNav.setAttribute('data-bs-theme', theme);
+      }
+
+      const stored = localStorage.getItem('honoka-theme');
+      const theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      applyTheme(theme);
+
+      const toggle = document.getElementById('theme-toggle');
+      if (toggle) {
+        toggle.checked = html.getAttribute('data-bs-theme') === 'dark';
+        toggle.addEventListener('change', function () {
+          const theme = this.checked ? 'dark' : 'light';
+          applyTheme(theme);
+          localStorage.setItem('honoka-theme', theme);
+        });
+      }
+    })();
+    </script>
+'''
+    html = re.sub(r'(</body>)', script + r'\1', html, flags=re.DOTALL)
+    return html
+
+
+def convert(html: str, is_docs: bool = True, lang: str = 'en') -> str:
     html = fix_assets_paths(html, is_docs)
+    # メイン navbar を Bootstrap 5.3 のダークモードパレットで切り替えられるよう準備
+    html = re.sub(
+        r'<header>\s*<nav class="navbar navbar-expand-lg navbar-light bg-light">',
+        '<header>\n  <nav id="honoka-main-nav" class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">',
+        html,
+        count=1
+    )
+    # サンプル等の navbar-light bg-light はグローバルなダークモードの影響を受けないよう
+    # 明示的にライトテーマを適用する
+    html = re.sub(
+        r'<nav class="(navbar[^"]*\bnavbar-light\b[^"]*\bbg-light\b[^"]*)"',
+        r'<nav class="\1" data-bs-theme="light"',
+        html
+    )
+    html = re.sub(
+        r'<nav class="(navbar[^"]*\bbg-light\b[^"]*\bnavbar-light\b[^"]*)"',
+        r'<nav class="\1" data-bs-theme="light"',
+        html
+    )
     html = replace_data_attrs(html)
     html = replace_utility_classes(html)
     html = replace_badges(html)
@@ -406,6 +487,9 @@ def convert(html: str, is_docs: bool = True) -> str:
     html = replace_bs5_popover_tooltip_init(html)
     html = move_nav_item_active_to_link(html)
     html = remove_jquery_if_unused(html)
+    html = add_dark_mode_toggle(html, lang)
+    html = add_dark_mode_head_script(html)
+    html = add_dark_mode_script(html)
     return html
 
 
@@ -417,8 +501,10 @@ def main():
     input_path = Path(sys.argv[1])
     output_path = Path(sys.argv[2])
 
+    lang = 'ja' if 'ja' in output_path.name else 'en'
+
     html = input_path.read_text(encoding='utf-8')
-    converted = convert(html, is_docs=True)
+    converted = convert(html, is_docs=True, lang=lang)
     output_path.write_text(converted, encoding='utf-8')
     print(f'Converted: {output_path}')
 

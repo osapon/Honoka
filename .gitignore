@@ -39,3 +39,7 @@ vendor/bundle/
 
 sftp-config.json
 
+# Python
+__pycache__/
+*.py[cod]
+

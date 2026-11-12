@@ -60,7 +60,8 @@ $form-check-input-disabled-opacity: 0.65;
 $form-check-label-disabled-opacity: 0.65;
 
 // Breadcrumbs を BS4 相当に戻す（BS5 既定は背景・余白・角丸ともになし）
-$breadcrumb-bg: #e9ecef;
+// 背景は CSS 変数にして、ダークモード時も自動切り替わるようにする
+$breadcrumb-bg: var(--bs-secondary-bg);
 $breadcrumb-padding-y: 0.75rem;
 $breadcrumb-padding-x: 1rem;
 $breadcrumb-border-radius: 0.25rem;

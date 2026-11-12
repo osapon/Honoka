@@ -90,12 +90,23 @@
   color: $gray-600;
 }
 
+[data-bs-theme="dark"] .form-check-input:disabled ~ .form-check-label,
+[data-bs-theme="dark"] .form-check-input[disabled] ~ .form-check-label {
+  color: var(--bs-secondary-color);
+}
+
 // ---------------------------------------------------------------------------
-// .text-muted の後継 .text-body-secondary の色を BS4 相当の $gray-600 に戻す
-// BS5 では --bs-secondary-color（rgba(33, 37, 41, 0.75)）で濃すぎる
+// .text-muted の後継 .text-body-secondary の色を BS4 相当に戻す
+// BS5 では --bs-secondary-color（rgba(33, 37, 41, 0.75)）で濃すぎるが、
+// ダークモードでは BS5 既定の --bs-secondary-color を使う
 // ---------------------------------------------------------------------------
 .text-body-secondary {
   color: $gray-600 !important;
+}
+
+[data-bs-theme="dark"] .text-body-secondary,
+[data-bs-theme="dark"].text-body-secondary {
+  color: var(--bs-secondary-color) !important;
 }
 
 // ---------------------------------------------------------------------------

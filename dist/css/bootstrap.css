@@ -4555,7 +4555,7 @@ textarea.form-control-lg {
   --bs-breadcrumb-padding-x: 1rem;
   --bs-breadcrumb-padding-y: 0.75rem;
   --bs-breadcrumb-margin-bottom: 1rem;
-  --bs-breadcrumb-bg: #e9ecef;
+  --bs-breadcrumb-bg: var(--bs-secondary-bg);
   --bs-breadcrumb-border-radius: 0.25rem;
   --bs-breadcrumb-divider-color: var(--bs-secondary-color);
   --bs-breadcrumb-item-padding-x: 0.5rem;
@@ -11822,8 +11822,18 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
+[data-bs-theme=dark] .form-check-input:disabled ~ .form-check-label,
+[data-bs-theme=dark] .form-check-input[disabled] ~ .form-check-label {
+  color: var(--bs-secondary-color);
+}
+
 .text-body-secondary {
   color: #6c757d !important;
+}
+
+[data-bs-theme=dark] .text-body-secondary,
+[data-bs-theme=dark].text-body-secondary {
+  color: var(--bs-secondary-color) !important;
 }
 
 small,
